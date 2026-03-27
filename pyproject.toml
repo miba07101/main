@@ -1,0 +1,27 @@
+[project]
+name = "pdf-ocr"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "docling>=2.82.0",
+    "intel-openmp>=2025.3.3",
+    "marker-pdf[full]>=1.10.2",
+    "odfpy>=1.4.1",
+    "onnxruntime>=1.24.4",
+    "opencv-python>=4.13.0.92",
+    "openpyxl>=3.1.5",
+    "openvino>=2026.0.0",
+    "paddleocr>=3.4.0",
+    "paddlepaddle>=3.3.1",
+    "paddleslim>=2.4.1",
+    "paddlex[ocr]>=3.4.3",
+    "pandas>=3.0.1",
+    "pdf2image>=1.17.0",
+    "rapid-table>=3.0.1",
+    "rapidocr-onnxruntime>=1.4.4",
+    "tabulate>=0.10.0",
+    "torch>=2.11.0",
+    "torchvision>=0.26.0",
+    "tqdm>=4.67.3",
+]
