@@ -109,7 +109,7 @@ def process_docling_tables(pdf_path, pages=None):
         tables_found += 1
 
         csv_path = out_dir / f"table_{table_ix}.csv"
-        table_df.to_csv(csv_path, index=False)
+        table_df.to_csv(csv_path, index=False, sep=";")
 
         xlsx_path = out_dir / f"table_{table_ix}.xlsx"
         table_df.to_excel(xlsx_path, index=False)
@@ -208,14 +208,14 @@ def process_camelot(pdf_path, pages=None):
         ):
             df = pd.DataFrame(table_dict["data"])
             csv_path = out_dir / f"table_{i + 1}.csv"
-            df.to_csv(csv_path, index=False)
+            df.to_csv(csv_path, index=False, sep=";")
             xlsx_path = out_dir / f"table_{i + 1}.xlsx"
             df.to_excel(xlsx_path, index=False)
         print(f"Extracted {len(tables)} table(s). Results in: {out_dir}")
     else:
         for i, table in tqdm(enumerate(tables), desc="Saving tables", unit="table"):
             csv_path = out_dir / f"table_{i + 1}.csv"
-            table.df.to_csv(csv_path, index=False)
+            table.df.to_csv(csv_path, index=False, sep=";")
             xlsx_path = out_dir / f"table_{i + 1}.xlsx"
             table.df.to_excel(xlsx_path, index=False)
         print(f"Extracted {len(tables)} table(s). Results in: {out_dir}")
